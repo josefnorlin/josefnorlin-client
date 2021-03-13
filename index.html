@@ -1,0 +1,84 @@
+<html>
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no"
+/>
+
+<meta charset="UTF-8">
+
+<link
+  href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+  rel="stylesheet"
+/>
+<style>
+  body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
+  }
+</style>
+
+
+
+<div class="flex bg-white">
+  <div class="flex-none w-20">
+  </div>
+  <div class="flex-grow p-1">
+    <img src="assets/logo.svg" style="max-width: 110px" />
+    <!-- This item will grow -->
+  </div>
+  <div class="flex-none w-20">
+
+  </div>
+</div>
+
+<div class="w-full fixed text-white text-sm select-none text-right p-1">
+  <span >Score: </span><span id="scoreEl">0</span>
+</div>
+
+<div class="fixed inset-0 flex items-center justify-center pb-40" id="modalEl">
+  <div id="whiteModalEl" class="bg-white max-w-md w-full p-6 text-center">
+    <h1 class="text-4xl font-bold leading-none" id="bigScoreEl">0</h1>
+    <p class="text-sm text-gray-700 mb-4">Points</p>
+    <div>
+      <button
+        class="bg-blue-500 text-white w-full py-3 rounded-full text-sm"
+        id="startGameBtn"
+      >
+        Start Game
+      </button>
+    </div>
+  </div>
+</div>
+
+<canvas></canvas>
+
+<div class="box-content w-full p-4 bg-white grid grid-cols-4 gap-4" style="height: 200px">
+  <div>
+  </div>
+  <div class="colspan-2">
+      Josef Norlin
+  </div>
+  <div>asd</div>
+  </div>
+</div>
+
+<!-- <div class="flex bg-white" style="height: 220px">
+  <div class="flex-none w-20">
+  </div>
+  <div class="flex-grow p-1">
+    asdasd
+
+  </div>
+  <div class="flex-none w-20">
+</div> -->
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+  integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+  crossorigin="anonymous"
+></script>
+<script src="./index.js"></script>
+
+</html>
