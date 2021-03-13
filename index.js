@@ -103,7 +103,7 @@ class Projectile {
 }
 
 const powerUpImg = new Image()
-powerUpImg.src = './img/lightning.png'
+powerUpImg.src = './images/lightning.png'
 
 class PowerUp {
   constructor(x, y, velocity) {

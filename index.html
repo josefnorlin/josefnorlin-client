@@ -1,84 +1,91 @@
 <html>
+  <header>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no"
+    />
+    <meta charset="UTF-8">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no"
-/>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <style>
+      body {
+        margin: 0;
+        background: black;
+        overflow: hidden;
+      }
+    </style>
+  </header>
 
-<meta charset="UTF-8">
-
-<link
-  href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-  rel="stylesheet"
-/>
-<style>
-  body {
-    margin: 0;
-    background: black;
-    overflow: hidden;
-  }
-</style>
+  <body>
 
 
-
-<div class="flex bg-white">
-  <div class="flex-none w-20">
-  </div>
-  <div class="flex-grow p-1">
-    <img src="assets/logo.svg" style="max-width: 110px" />
-    <!-- This item will grow -->
-  </div>
-  <div class="flex-none w-20">
-
-  </div>
-</div>
-
-<div class="w-full fixed text-white text-sm select-none text-right p-1">
-  <span >Score: </span><span id="scoreEl">0</span>
-</div>
-
-<div class="fixed inset-0 flex items-center justify-center pb-40" id="modalEl">
-  <div id="whiteModalEl" class="bg-white max-w-md w-full p-6 text-center">
-    <h1 class="text-4xl font-bold leading-none" id="bigScoreEl">0</h1>
-    <p class="text-sm text-gray-700 mb-4">Points</p>
-    <div>
-      <button
-        class="bg-blue-500 text-white w-full py-3 rounded-full text-sm"
-        id="startGameBtn"
-      >
-        Start Game
-      </button>
+    <div class="bg-white py-1 px-2">
+      <img src="assets/logo.svg" style="max-width: 110px" />
+      <!-- <svg class="svg-icon"><use xlink:href="assets/minima-social-icons.svg#instagram"></use></svg> -->
     </div>
-  </div>
-</div>
 
-<canvas></canvas>
+    <div class="w-full fixed text-white text-sm select-none text-right p-1">
+      <span >Score: </span><span id="scoreEl">0</span>
+    </div>
 
-<div class="box-content w-full p-4 bg-white grid grid-cols-4 gap-4" style="height: 200px">
-  <div>
-  </div>
-  <div class="colspan-2">
-      Josef Norlin
-  </div>
-  <div>asd</div>
-  </div>
-</div>
+    <div class="fixed inset-0 flex items-center justify-center pb-40" id="modalEl">
+      <div id="whiteModalEl" class="bg-white max-w-md w-full p-6 text-center">
+        <h1 class="text-4xl font-bold leading-none" id="bigScoreEl">0</h1>
+        <p class="text-sm text-gray-700 mb-4">Points</p>
+        <div>
+          <button
+            class="bg-blue-500 text-white w-full py-3 rounded-full text-sm"
+            id="startGameBtn"
+          >
+            Start Game
+          </button>
+        </div>
+      </div>
+    </div>
 
-<!-- <div class="flex bg-white" style="height: 220px">
-  <div class="flex-none w-20">
-  </div>
-  <div class="flex-grow p-1">
-    asdasd
+    <canvas></canvas>
 
-  </div>
-  <div class="flex-none w-20">
-</div> -->
+    <!-- <div class="box-content w-full p-4 bg-white grid grid-cols-4 gap-4" style="height: 200px">
+      <div>
+      </div>
+      <div class="colspan-2">
+          <img class="p-1" src="assets/josef.jpg" width="110px" align="left" />
+          Josef Norlin
+          Full-Stack Developer with expertise in JavaScript
+          Technology and media have as long as I can remember inspired me to make a difference and the older I get the more I believe we can change the world through code, music, and empathy!
 
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-  integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
-  crossorigin="anonymous"
-></script>
-<script src="./index.js"></script>
+          "Don't aspire to make a living, aspire to make a difference" ~ Denzel Washington
+        </div>
+      </div>
+    </div> -->
+
+    <div class="flex bg-white" style="height: 220px">
+      <div class="flex-none w-0 sm:w-20 md:w-40">
+      </div>
+      <div class="flex-grow py-2 align-middle">
+          <img class="px-3 py-3" src="images/josef.jpg" width="126px" align="left" />
+          <span class="text-md p-0 sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl">Josef Norlin</span>
+          <p class="text-xs sm:text-sm md:text-md italic">Full-Stack Developer with expertise in JavaScript</p>
+          <p class="text-xs md:text-sm xs:text-xs">Technology and media have as long as I can remember inspired me to make a difference and the older I get the more I believe we can change the world through code, music, and empathy!</p>
+          <p class="invisible text-xs md:visible lg:visible text-sm sm:text-xs italic">"Don't aspire to make a living, aspire to make a difference" ~ Denzel Washington</p>
+      </div>
+      <div class="flex-none w-0 sm:w-20 md:w-40">
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
 
 </html>
