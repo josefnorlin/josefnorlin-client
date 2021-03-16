@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <header>
     <meta
@@ -15,21 +16,41 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <style>
+      @font-face {
+      font-family: 'Asphalts Brush';
+      src: url('assets/fonts/asphalts_brush.eot'); /* IE9 Compat Modes */
+      src: url('assets/fonts/asphalts_brush.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('assets/fonts/asphalts_brush.woff') format('woff'), /* Modern Browsers */
+      url('assets/fonts/asphalts_brush.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('assets/fonts/asphalts_brush.svg#svgFontName') format('svg'); /* Legacy iOS */}
       body {
         margin: 0;
         background: black;
         overflow: hidden;
       }
+      .logo {
+        font-size: 32px;
+        font-family: 'Asphalts Brush';
+        line-height: 1.1;
+      }
     </style>
   </header>
 
   <body>
-
-
-    <div class="bg-white py-1 px-2">
-      <img src="assets/logo.svg" style="max-width: 110px" />
-      <!-- <svg class="svg-icon"><use xlink:href="assets/minima-social-icons.svg#instagram"></use></svg> -->
+    <div class="flex bg-white p-1">
+      <div class="flex-1" style="padding-top: 7px">
+        <p class="logo py-1 px-2">Josef Norlin</p>
+        <!-- Will grow and shrink as needed without taking initial size into account -->
+      </div>
+      <div class="flex-1 text-right">
+        <p class="py-3 px-2">
+          <a href="https://www.linkedin.com/in/josefnorlin" target="_blank"><i style="margin-right: 15px" class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/josefnorlin" target="_blank"><i class="fab fa-github"></i></a>
+        </p>
+        <!-- Will grow and shrink as needed without taking initial size into account -->
+      </div>
     </div>
 
     <div class="w-full fixed text-white text-sm select-none text-right p-1">
@@ -74,8 +95,8 @@
           <img class="px-3 py-3" src="images/josef.jpg" width="126px" align="left" />
           <span class="text-md p-0 sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl">Josef Norlin</span>
           <p class="text-xs sm:text-sm md:text-md italic">Full-Stack Developer with expertise in JavaScript</p>
-          <p class="text-xs md:text-sm xs:text-xs">Technology and media have as long as I can remember inspired me to make a difference and the older I get the more I believe we can change the world through code, music, and empathy!</p>
-          <p class="invisible text-xs md:visible lg:visible text-sm sm:text-xs italic">"Don't aspire to make a living, aspire to make a difference" ~ Denzel Washington</p>
+          <p class="text-xs md:text-sm xs:text-xs">Technology and media have as long as I can remember inspired me to make a difference. Let's change the world through code, music, and empathy!</p>
+          <p class="invisible text-xs sm:visble md:visible lg:visible text-sm sm:text-xs italic">"Don't aspire to make a living, aspire to make a difference" ~ Denzel Washington</p>
       </div>
       <div class="flex-none w-0 sm:w-20 md:w-40">
     </div>
