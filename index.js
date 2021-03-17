@@ -604,6 +604,28 @@ addEventListener('resize', () => {
   init()
 })
 
+function startFunction() {
+  init()
+  animate()
+  playAudio ? startGameAudio.play() : ''
+  scene.active = true
+
+  score = 0
+  scoreEl.innerHTML = score
+  bigScoreEl.innerHTML = score
+  playAudio ? backgroundMusicAudio.play() : ''
+
+  gsap.to('#whiteModalEl', {
+    opacity: 0,
+    scale: 0.75,
+    duration: 0.25,
+    ease: 'expo.in',
+    onComplete: () => {
+      modalEl.style.display = 'none'
+    }
+  })
+};
+
 startGameBtn.addEventListener('click', () => {
   init()
   animate()

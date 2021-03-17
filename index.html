@@ -27,6 +27,7 @@
       url('assets/fonts/asphalts_brush.svg#svgFontName') format('svg'); /* Legacy iOS */}
       body {
         margin: 0;
+        height: 100vh;
         background: black;
         overflow: hidden;
       }
@@ -35,71 +36,122 @@
         font-family: 'Asphalts Brush';
         line-height: 1.1;
       }
+      #loader-wrapper {
+        display: flex;
+        height: 100%;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+      }
+      #loader {
+        padding: 10px;
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
     </style>
+    <script>
+      document.onreadystatechange = function() {
+          if (document.readyState !== "complete") {
+              document.querySelector(
+                "#page-container").style.visibility = "hidden";
+              document.querySelector(
+                "#loader-wrapper").style.visibility = "visible";
+          } else {
+              document.querySelector(
+                "#loader-wrapper").style.display = "none";
+              document.querySelector(
+                "#page-container").style.visibility = "visible";
+          }
+      };
+    </script>
   </header>
 
   <body>
-    <div class="flex bg-white p-1">
-      <div class="flex-1" style="padding-top: 7px">
-        <p class="logo py-1 px-2">Josef Norlin</p>
-        <!-- Will grow and shrink as needed without taking initial size into account -->
-      </div>
-      <div class="flex-1 text-right">
-        <p class="py-3 px-2">
-          <a href="https://www.linkedin.com/in/josefnorlin" target="_blank"><i style="margin-right: 15px" class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/josefnorlin" target="_blank"><i class="fab fa-github"></i></a>
-        </p>
-        <!-- Will grow and shrink as needed without taking initial size into account -->
-      </div>
+    <div id="loader-wrapper">
+      <div id="loader"></div>
     </div>
+    <div id="page-container">
+      <div class="flex bg-white p-1">
+        <div class="flex-1" style="padding-top: 7px">
+          <p class="logo py-1 px-2">Josef Norlin</p>
+          <!-- Will grow and shrink as needed without taking initial size into account -->
+        </div>
+        <div class="flex-1 text-right">
+          <p class="py-3 px-2 z-50">
+            <a href="https://www.linkedin.com/in/josefnorlin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/josefnorlin" target="_blank"><i class="fab fa-github ml-3"></i></a>
+          </p>
+          <!-- Will grow and shrink as needed without taking initial size into account -->
+        </div>
+      </div>
 
-    <div class="w-full fixed text-white text-sm select-none text-right p-1">
-      <span >Score: </span><span id="scoreEl">0</span>
-    </div>
+      <div class="w-full fixed text-white text-sm select-none text-right p-1">
+        <span >Score: </span><span id="scoreEl">0</span>
+      </div>
 
-    <div class="fixed inset-0 flex items-center justify-center pb-40" id="modalEl">
-      <div id="whiteModalEl" class="bg-white max-w-md w-full p-6 text-center">
-        <h1 class="text-4xl font-bold leading-none" id="bigScoreEl">0</h1>
-        <p class="text-sm text-gray-700 mb-4">Points</p>
-        <div>
-          <button
+      <div class="fixed inset-0 flex items-center justify-center my-3.5 pb-40 z-1" id="modalEl">
+        <div class="absolute top-0 right-0 p-3">
+          <a href="https://www.linkedin.com/in/josefnorlin" target="_blank">
+            <span class="w-5 h-5 py-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          </a>
+          <a href="https://github.com/josefnorlin" target="_blank">
+            <span class="w-5 h-5 py-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          </a>
+        </div>
+        <div id="whiteModalEl" class="bg-white max-w-md w-full p-6 text-center z-1">
+
+          <h1 class="text-4xl font-bold leading-none z-1" id="bigScoreEl">0</h1>
+          <p class="text-sm text-gray-700 mb-4">Points</p>
+          <div>
+            <button
             class="bg-blue-500 text-white w-full py-3 rounded-full text-sm"
             id="startGameBtn"
-          >
+            >
             Start Game
           </button>
+          <p class="pt-6 text-xs text-gray-500">Continuously tap the WASD keys, or your arrow keys to move. Point and click to shoot. Grab power ups as needed to better your score (hold to shoot machine gun style).</p>
+        </div>
         </div>
       </div>
-    </div>
 
-    <canvas></canvas>
+      <canvas></canvas>
 
-    <!-- <div class="box-content w-full p-4 bg-white grid grid-cols-4 gap-4" style="height: 200px">
-      <div>
-      </div>
-      <div class="colspan-2">
-          <img class="p-1" src="assets/josef.jpg" width="110px" align="left" />
-          Josef Norlin
-          Full-Stack Developer with expertise in JavaScript
-          Technology and media have as long as I can remember inspired me to make a difference and the older I get the more I believe we can change the world through code, music, and empathy!
-
-          "Don't aspire to make a living, aspire to make a difference" ~ Denzel Washington
+      <!-- <div class="box-content w-full p-4 bg-white grid grid-cols-4 gap-4" style="height: 200px">
+        <div>
         </div>
-      </div>
-    </div> -->
+        <div class="colspan-2">
+            <img class="p-1" src="assets/josef.jpg" width="110px" align="left" />
+            Josef Norlin
+            Full-Stack Developer with expertise in JavaScript
+            Technology and media have as long as I can remember inspired me to make a difference and the older I get the more I believe we can change the world through code, music, and empathy!
 
-    <div class="flex bg-white" style="height: 220px">
-      <div class="flex-none w-0 sm:w-20 md:w-40">
+            "Don't aspire to make a living, aspire to make a difference" ~ Denzel Washington
+          </div>
+        </div>
+      </div> -->
+
+      <div class="flex bg-white" style="height: 220px">
+        <div class="flex-none w-0 sm:w-20 md:w-40">
+        </div>
+        <div class="flex-grow py-3 align-middle">
+            <img class="px-3 py-1" src="images/josef.jpg" width="126px" align="left" />
+            <span class="text-md sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-xl leading-3 md:py-3 lg:py-5 xl:py-5" >Josef Norlin</span>
+            <p class="text-xs sm:text-sm md:text-md font-semibold">Full-Stack Developer with expertise in JavaScript</p>
+            <p class="text-xs md:text-sm xs:text-xs">Technology and media have as long as I can remember inspired me to make a difference. Let's change the world through code, music, and empathy!</p>
+            <p class="invisible text-sm sm:visible md:visible lg:visible italic">"Don't aspire to make a living, aspire to make a difference" ~ Denzel Washington</p>
+        </div>
+        <div class="flex-none w-0 sm:w-20 md:w-40">
       </div>
-      <div class="flex-grow py-2 align-middle">
-          <img class="px-3 py-3" src="images/josef.jpg" width="126px" align="left" />
-          <span class="text-md p-0 sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl">Josef Norlin</span>
-          <p class="text-xs sm:text-sm md:text-md italic">Full-Stack Developer with expertise in JavaScript</p>
-          <p class="text-xs md:text-sm xs:text-xs">Technology and media have as long as I can remember inspired me to make a difference. Let's change the world through code, music, and empathy!</p>
-          <p class="invisible text-xs sm:visble md:visible lg:visible text-sm sm:text-xs italic">"Don't aspire to make a living, aspire to make a difference" ~ Denzel Washington</p>
-      </div>
-      <div class="flex-none w-0 sm:w-20 md:w-40">
-    </div>
+  </div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
