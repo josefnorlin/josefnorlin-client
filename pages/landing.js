@@ -15,6 +15,8 @@ import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
+import profile from "assets/img/faces/christian.jpg";
+
 import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 
 // Sections for this page
@@ -29,12 +31,29 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
+
+  const imageClasses = classNames(
+    classes.imgRaised,
+    classes.imgRoundedCircle,
+    classes.imgFluid
+  );
+
   return (
     <div>
+      <style jsx>{`
+    @font-face {
+      font-family: 'Asphalts';
+          src: url('/fonts/asphalts-brush.ttf');
+    }
+        p {
+          font-family: 'Asphalts';
+        }
+      `}</style>
+      <p>Hello</p>
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="NextJS Material Kit"
+        brand="Josef Norlin"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -47,8 +66,8 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Your Story Starts With Us.</h1>
-              <h4>
+              <h1 className={classes.headerTitle}>Technology means nothing without humans.</h1>
+              <h4 className={classes.headerDescription}>
                 Every landing page needs a small description after the big bold
                 title, that{"'"}s why we added this text here. Add here all the
                 information that can make you or your product create the first
@@ -71,6 +90,36 @@ export default function LandingPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+        <GridContainer justify="center">
+              <GridItem xs={12} sm={12} md={6}>
+                <div className={classes.profile}>
+                  <div>
+                    <img src={profile} alt="..." className={imageClasses} />
+                  </div>
+                  <div className={classes.name}>
+                    <h3 className={classes.title}>Christian Louboutin</h3>
+                    <h6>DESIGNER</h6>
+                    <Button justIcon link className={classes.margin5}>
+                      <i className={"fab fa-twitter"} />
+                    </Button>
+                    <Button justIcon link className={classes.margin5}>
+                      <i className={"fab fa-instagram"} />
+                    </Button>
+                    <Button justIcon link className={classes.margin5}>
+                      <i className={"fab fa-facebook"} />
+                    </Button>
+                  </div>
+                </div>
+              </GridItem>
+            </GridContainer>
+            <div className={classes.description}>
+              <p>
+                An artist of considerable range, Chet Faker — the name taken by
+                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
+                and records all of his own music, giving it a warm, intimate
+                feel with a solid groove structure.{" "}
+              </p>
+            </div>
           <ProductSection />
           <TeamSection />
           <WorkSection />

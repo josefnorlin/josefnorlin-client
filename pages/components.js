@@ -53,9 +53,9 @@ export default function Components(props) {
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>NextJS Material Kit.</h1>
+                <h1 className={classes.title}>Josef Norlin</h1>
                 <h3 className={classes.subtitle}>
-                  A Badass Material Kit based on Material-UI and NextJS.
+                  Technology means nothing without humans.
                 </h3>
               </div>
             </GridItem>

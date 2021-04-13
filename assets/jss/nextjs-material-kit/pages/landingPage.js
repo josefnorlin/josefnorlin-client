@@ -1,10 +1,44 @@
 import { container, title } from "assets/jss/nextjs-material-kit.js";
 
+import imagesStyle from "assets/jss/nextjs-material-kit/imagesStyles.js";
+
 const landingPageStyle = {
   container: {
     zIndex: "12",
-    color: "#FFFFFF",
     ...container
+  },
+  profile: {
+    textAlign: "center",
+    "& img": {
+      maxWidth: "160px",
+      width: "100%",
+      margin: "0 auto",
+      transform: "translate3d(0, -50%, 0)"
+    }
+  },
+  description: {
+    margin: "1.071rem auto 0",
+    maxWidth: "600px",
+    color: "#999",
+    textAlign: "center !important"
+  },
+  name: {
+    marginTop: "-80px"
+  },
+  ...imagesStyle,
+  headerTitle: {
+    ...title,
+    display: "inline-block",
+    position: "relative",
+    marginTop: "30px",
+    color: "#FFF",
+    minHeight: "32px",
+    textDecoration: "none"
+  },
+  headerDescription: {
+    margin: "1.071rem auto 0",
+    maxWidth: "600px",
+    color: "#FFF",
   },
   title: {
     ...title,
@@ -12,7 +46,6 @@ const landingPageStyle = {
     position: "relative",
     marginTop: "30px",
     minHeight: "32px",
-    color: "#FFFFFF",
     textDecoration: "none"
   },
   subtitle: {
