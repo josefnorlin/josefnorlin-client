@@ -17,7 +17,7 @@ import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
-import profile from "assets/img/faces/christian.jpg";
+import profile from "assets/img/josef.jpg";
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.js";
@@ -56,22 +56,12 @@ export default function LandingPage(props) {
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.headerTitle}>Technology means nothing without humans.</h1>
               <h4 className={classes.headerDescription}>
+
                 Every landing page needs a small description after the big bold
                 title, that{"'"}s why we added this text here. Add here all the
                 information that can make you or your product create the first
                 impression.
               </h4>
-              <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-play" />
-                Watch video
-              </Button>
             </GridItem>
           </GridContainer>
         </div>
@@ -85,8 +75,8 @@ export default function LandingPage(props) {
                   <img src={profile} alt="..." className={imageClasses} />
                 </div>
                 <div className={classes.name}>
-                  <h3 className={classes.title}>Christian Louboutin</h3>
-                  <h6>DESIGNER</h6>
+                  <h3 className={classes.title}>Josef Norlin</h3>
+                  <h6>HUMAN CENTERED FRONT-END DEVELOPER</h6>
                   <Button justIcon link className={classes.margin5}>
                     <i className={"fab fa-twitter"} />
                   </Button>
