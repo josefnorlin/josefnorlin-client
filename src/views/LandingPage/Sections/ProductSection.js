@@ -34,7 +34,7 @@ export default function ProductSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Product Ownership"
-              description="No matter the role, I only work on project I feel deeply invested in. That means that taking pride and ownership of my outcome becomes so much more natural."
+              description="No matter the role, I only work on products I feel deeply invested in. That means that taking pride and ownership of my outcome becomes so much more natural."
               icon={Fingerprint}
               iconColor="info"
               vertical
