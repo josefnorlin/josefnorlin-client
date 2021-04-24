@@ -21,13 +21,11 @@ export default function ProductSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Let{"'"}s talk product</h2>
+          <h2 className={classes.title}>Empathy Shows</h2>
           <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn
-            {"'"}t scroll to get here. Add a button if you want the user to see
-            more.
+            For me the empathy for the customer is what drives me. And what better way to empower people than giving them well-designed tools?
+            In my roles as product-owner, developer and designer I{"'"}ve made it a personal vendetta to erase badly designed applications.
+            If you don{"'"}t feel inspired: It's not your fault, it{"'"}s the product.
           </h5>
         </GridItem>
       </GridContainer>
@@ -35,17 +33,17 @@ export default function ProductSection() {
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Free Chat"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Chat}
+              title="Product Ownership"
+              description="No matter the role, I only work on project I feel deeply invested in. That means that taking pride and ownership of my outcome becomes so much more natural."
+              icon={Fingerprint}
               iconColor="info"
               vertical
             />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Verified Users"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              title="Full-Stack Developer"
+              description="I've never stopped being curious. Even as a kid I started programming, and I plan to never stop. It's where the ideas meet the tarmac and possibilities arise."
               icon={VerifiedUser}
               iconColor="success"
               vertical
@@ -53,9 +51,9 @@ export default function ProductSection() {
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Fingerprint"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Fingerprint}
+              title="UX Designer"
+              description="The end goal is a great user experience. There I always strive to involve the consumer early in the process. Therefore drawing dreams is often the first step to success."
+              icon={Chat}
               iconColor="danger"
               vertical
             />

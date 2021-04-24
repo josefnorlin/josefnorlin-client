@@ -50,18 +50,11 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      <Parallax filter image={require("assets/img/landing-bg.jpg")}>
+      <Parallax image={require("assets/img/bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.headerTitle}>Technology means nothing without humans.</h1>
-              <h4 className={classes.headerDescription}>
-
-                Every landing page needs a small description after the big bold
-                title, that{"'"}s why we added this text here. Add here all the
-                information that can make you or your product create the first
-                impression.
-              </h4>
             </GridItem>
           </GridContainer>
         </div>
@@ -76,7 +69,7 @@ export default function LandingPage(props) {
                 </div>
                 <div className={classes.name}>
                   <h3 className={classes.title}>Josef Norlin</h3>
-                  <h6>HUMAN CENTERED FRONT-END DEVELOPER</h6>
+                  <h6>HUMAN-CENTERED FULL-STACK DEVELOPER</h6>
                   <Button justIcon link className={classes.margin5}>
                     <i className={"fab fa-twitter"} />
                   </Button>
