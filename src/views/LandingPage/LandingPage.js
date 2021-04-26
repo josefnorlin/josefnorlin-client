@@ -21,7 +21,7 @@ import profile from "assets/img/josef.jpg";
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
+// import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 
 const dashboardRoutes = [];
