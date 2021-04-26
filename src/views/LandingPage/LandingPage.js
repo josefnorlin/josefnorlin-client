@@ -84,7 +84,7 @@ export default function LandingPage(props) {
             </GridItem>
           </GridContainer>
           <ProductSection />
-          <TeamSection />
+          {/* <TeamSection /> */}
           <WorkSection />
         </div>
       </div>
