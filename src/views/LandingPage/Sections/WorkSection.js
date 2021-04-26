@@ -22,7 +22,8 @@ export default function WorkSection() {
         <GridItem cs={12} sm={12} md={8}>
           <h2 className={classes.title}>Let{"'"}s get in touch</h2>
           <h4 className={classes.description}>
-            I{"'"}m always interested in new connections. Write here and I{"'"}ll get back to you.
+            I{"'"}m always interested in new connections. Write here and I{"'"}
+            ll get back to you.
           </h4>
           <form>
             <GridContainer>
@@ -31,7 +32,7 @@ export default function WorkSection() {
                   labelText="Your Name"
                   id="name"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                 />
               </GridItem>
@@ -40,7 +41,7 @@ export default function WorkSection() {
                   labelText="Your Email"
                   id="email"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                 />
               </GridItem>
@@ -49,11 +50,11 @@ export default function WorkSection() {
                 id="message"
                 formControlProps={{
                   fullWidth: true,
-                  className: classes.textArea
+                  className: classes.textArea,
                 }}
                 inputProps={{
                   multiline: true,
-                  rows: 5
+                  rows: 5,
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
