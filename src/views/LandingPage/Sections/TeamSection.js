@@ -18,7 +18,7 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/team
 
 import team1 from "assets/img/faces/p-h.jpg";
 import team2 from "assets/img/faces/peter.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
+// import team3 from "assets/img/faces/kendall.jpg";
 
 const useStyles = makeStyles(styles);
 
@@ -108,15 +108,15 @@ export default function TeamSection() {
               </CardFooter>
             </Card>
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
+          {/* <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={team3} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Kendall Jenner
+                Madeleine Rösth
                 <br />
-                <small className={classes.smallTitle}>Model</small>
+                <small className={classes.smallTitle}></small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
@@ -150,7 +150,7 @@ export default function TeamSection() {
                 </Button>
               </CardFooter>
             </Card>
-          </GridItem>
+          </GridItem> */}
         </GridContainer>
       </div>
     </div>
