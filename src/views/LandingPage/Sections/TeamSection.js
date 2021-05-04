@@ -16,9 +16,9 @@ import CardFooter from "components/Card/CardFooter.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
-import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
+import team1 from "assets/img/faces/p-h.jpg";
+import team2 from "assets/img/faces/peter.jpg";
+// import team3 from "assets/img/faces/kendall.jpg";
 
 const useStyles = makeStyles(styles);
 
@@ -40,40 +40,33 @@ export default function TeamSection() {
                 <img src={team1} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Gigi Hadid
+                Per-Håkan Bonnevier
                 <br />
-                <small className={classes.smallTitle}>Model</small>
+                <small className={classes.smallTitle}>
+                  Product-owner, Swedish Public Employment Service
+                </small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
+                  Josef is initiative, thorough, focused, constructive,
+                  productive, positive, open, cooperative, responsive. Whoever
+                  hires Josef gets a really good and loyal co-worker who also
+                  lifts others within the team.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
+                <a
+                  href="https://www.linkedin.com/in/per-h%C3%A5kan-bonnevier-3837aa20/"
+                  target="_new"
                 >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-instagram"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-facebook"} />
-                </Button>
+                  <Button
+                    justIcon
+                    color="transparent"
+                    className={classes.margin5}
+                  >
+                    <i className={classes.socials + " fab fa-linkedin"} />
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
           </GridItem>
@@ -83,16 +76,18 @@ export default function TeamSection() {
                 <img src={team2} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Christian Louboutin
+                Peter Webb
                 <br />
-                <small className={classes.smallTitle}>Designer</small>
+                <small className={classes.smallTitle}>
+                  Multi-Entrepreneur, ePlanket
+                </small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
+                  Josef is incredibly good at what he does and always has a lot
+                  of creative and good ideas, he is also very easy to work with
+                  and he likes to solve problems and take on difficult
+                  challenges.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -113,15 +108,15 @@ export default function TeamSection() {
               </CardFooter>
             </Card>
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
+          {/* <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img src={team3} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Kendall Jenner
+                Madeleine Rösth
                 <br />
-                <small className={classes.smallTitle}>Model</small>
+                <small className={classes.smallTitle}></small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
@@ -155,7 +150,7 @@ export default function TeamSection() {
                 </Button>
               </CardFooter>
             </Card>
-          </GridItem>
+          </GridItem> */}
         </GridContainer>
       </div>
     </div>
