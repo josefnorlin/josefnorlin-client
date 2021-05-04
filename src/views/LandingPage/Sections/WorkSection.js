@@ -15,6 +15,11 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/work
 const useStyles = makeStyles(styles);
 
 export default function WorkSection() {
+  //function sendMail() {
+  // https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod
+  //console.log("hej");
+  //}
+
   const classes = useStyles();
   return (
     <div className={classes.section}>
@@ -58,7 +63,9 @@ export default function WorkSection() {
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
-                <Button color="primary">Send Message</Button>
+                <Button onClick={() => sendMail()} color="primary">
+                  Send Message
+                </Button>
               </GridItem>
             </GridContainer>
           </form>

@@ -21,7 +21,7 @@ export default function ProductSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Empathy Shows</h2>
+          <h2 className={classes.title}>Empathy Matters</h2>
           <h5 className={classes.description}>
             For me the empathy for the customer is what drives me. And what better way to empower people than giving them well-designed tools?
             In my roles as product-owner, developer and designer I{"'"}ve made it a personal vendetta to erase badly designed applications.
