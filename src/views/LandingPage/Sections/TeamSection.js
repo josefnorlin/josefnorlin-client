@@ -17,7 +17,7 @@ import CardFooter from "components/Card/CardFooter.js";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
 import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
+import team2 from "assets/img/faces/peter.jpg";
 import team3 from "assets/img/faces/kendall.jpg";
 
 const useStyles = makeStyles(styles);
@@ -83,16 +83,13 @@ export default function TeamSection() {
                 <img src={team2} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Christian Louboutin
+                Peter Webb
                 <br />
-                <small className={classes.smallTitle}>Designer</small>
+                <small className={classes.smallTitle}>Entrepreneur</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
+                Josef är otroligt duktigt på det han gör och har alltid en massa kreativa och bra idéer, han är även väldigt lätt att samarbeta med och han gillar att lösa problem och ta sig an svåra utmaningar.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
