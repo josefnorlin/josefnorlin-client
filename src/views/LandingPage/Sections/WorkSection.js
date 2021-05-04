@@ -63,7 +63,8 @@ export default function WorkSection() {
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
-                <Button onClick={() => sendMail()} color="primary">
+                <Button color="primary">
+                  {/* <Button onClick={() => sendMail()} color="primary"> */}
                   Send Message
                 </Button>
               </GridItem>
