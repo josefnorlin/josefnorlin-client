@@ -42,35 +42,31 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Per-Håkan Bonnevier
                 <br />
-                <small className={classes.smallTitle}>Product-owner, Swedish Public Employment Service</small>
+                <small className={classes.smallTitle}>
+                  Product-owner, Swedish Public Employment Service
+                </small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                Josef is initiative, thorough, focused, constructive, productive, positive, open, cooperative, responsive. Whoever hires Josef gets a really good and loyal co-worker who also lifts others within the team.
+                  Josef is initiative, thorough, focused, constructive,
+                  productive, positive, open, cooperative, responsive. Whoever
+                  hires Josef gets a really good and loyal co-worker who also
+                  lifts others within the team.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
+                <a
+                  href="https://www.linkedin.com/in/per-h%C3%A5kan-bonnevier-3837aa20/"
+                  target="_new"
                 >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-instagram"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-facebook"} />
-                </Button>
+                  <Button
+                    justIcon
+                    color="transparent"
+                    className={classes.margin5}
+                  >
+                    <i className={classes.socials + " fab fa-linkedin"} />
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
           </GridItem>
@@ -82,11 +78,16 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Peter Webb
                 <br />
-                <small className={classes.smallTitle}>Multi-Entrepreneur, ePlanket</small>
+                <small className={classes.smallTitle}>
+                  Multi-Entrepreneur, ePlanket
+                </small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                Josef is incredibly good at what he does and always has a lot of creative and good ideas, he is also very easy to work with and he likes to solve problems and take on difficult challenges.
+                  Josef is incredibly good at what he does and always has a lot
+                  of creative and good ideas, he is also very easy to work with
+                  and he likes to solve problems and take on difficult
+                  challenges.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
