@@ -16,7 +16,7 @@ import CardFooter from "components/Card/CardFooter.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
-import team1 from "assets/img/faces/avatar.jpg";
+import team1 from "assets/img/faces/p-h.jpg";
 import team2 from "assets/img/faces/peter.jpg";
 import team3 from "assets/img/faces/kendall.jpg";
 
@@ -42,14 +42,11 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Gigi Hadid
                 <br />
-                <small className={classes.smallTitle}>Model</small>
+                <small className={classes.smallTitle}>Product-owner, Swedish Public Employment Service</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
+                Whoever hires Josef gets a really good and loyal co-worker who also lifts others within the team.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -85,11 +82,11 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Peter Webb
                 <br />
-                <small className={classes.smallTitle}>Multi-Entrepreneur</small>
+                <small className={classes.smallTitle}>Multi-Entrepreneur, ePlanket</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                Josef är otroligt duktigt på det han gör och har alltid en massa kreativa och bra idéer, han är även väldigt lätt att samarbeta med och han gillar att lösa problem och ta sig an svåra utmaningar.
+                Josef is incredibly good at what he does and always has a lot of creative and good ideas, he is also very easy to work with and he likes to solve problems and take on difficult challenges.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
