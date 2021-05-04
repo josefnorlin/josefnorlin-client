@@ -21,7 +21,7 @@ import profile from "assets/img/josef.jpg";
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.js";
-// import TeamSection from "./Sections/TeamSection.js";
+import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 
 const dashboardRoutes = [];
@@ -54,7 +54,9 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.headerTitle}>Technology means nothing without humans.</h1>
+              <h1 className={classes.headerTitle}>
+                Technology means nothing without humans.
+              </h1>
             </GridItem>
           </GridContainer>
         </div>
@@ -84,7 +86,7 @@ export default function LandingPage(props) {
             </GridItem>
           </GridContainer>
           <ProductSection />
-          {/* <TeamSection /> */}
+          <TeamSection />
           <WorkSection />
         </div>
       </div>
