@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
+import { Snackbar } from "@material-ui/core";
+import { Alert } from "@material-ui/lab";
 // @material-ui/icons
 
 // core components
@@ -15,14 +16,26 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/work
 const useStyles = makeStyles(styles);
 
 export default function WorkSection() {
-  //function sendMail() {
-  // https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod
-  //console.log("hej");
-  //}
+  function sendMail() {
+    // https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod
+    console.log("hej");
+  }
+
+  const [showNotification, setShowNotification] = useState(true);
 
   const classes = useStyles();
   return (
     <div className={classes.section}>
+      <Snackbar
+        open={showNotification}
+        autoHideDuration={6000}
+        onClose={() => setShowNotification(false)}
+      >
+        <Alert onClose={() => setShowNotification(false)} severity="success">
+          This is a success message!
+        </Alert>
+      </Snackbar>
+
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
           <h2 className={classes.title}>Let{"'"}s get in touch</h2>
@@ -63,8 +76,7 @@ export default function WorkSection() {
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
-                <Button color="primary">
-                  {/* <Button onClick={() => sendMail()} color="primary"> */}
+                <Button onClick={() => sendMail()} color="primary">
                   Send Message
                 </Button>
               </GridItem>
