@@ -61,7 +61,7 @@ export default function LandingPage(props) {
                 <div>
                   <img
                     src={profile}
-                    alt="Image of Josef Norlin"
+                    alt="Josef Norlin"
                     className={imageClasses}
                   />
                 </div>

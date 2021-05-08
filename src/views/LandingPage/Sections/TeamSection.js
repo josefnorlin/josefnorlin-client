@@ -29,7 +29,7 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img
                   src={team1}
-                  alt="Image of Per-Håkan Bonnevier, Product-Owner, Swedish Public Employment Service"
+                  alt="Per-Håkan Bonnevier, Product-Owner, Swedish Public Employment Service"
                   className={imageClasses}
                   style={{ maxWidth: "160px" }}
                 />
@@ -56,7 +56,7 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img
                   src={team2}
-                  alt="Image of Peter Webb, Multi-Entrepreneur, ePlanket"
+                  alt="Peter Webb, Multi-Entrepreneur, ePlanket"
                   className={imageClasses}
                   style={{ maxWidth: "160px" }}
                 />
