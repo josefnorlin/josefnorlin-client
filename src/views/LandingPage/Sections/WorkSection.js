@@ -88,8 +88,11 @@ export default function WorkSection() {
                   id="name"
                   value={name}
                   formControlProps={{
-                    onChange: (e) => setName(e.target.value),
                     fullWidth: true,
+                  }}
+                  inputProps={{
+                    disabled: submitting,
+                    onChange: (e) => setName(e.target.value),
                   }}
                 />
               </GridItem>
@@ -103,6 +106,7 @@ export default function WorkSection() {
                   }}
                   inputProps={{
                     onChange: (e) => setEmail(e.target.value),
+                    disabled: submitting,
                   }}
                 />
               </GridItem>
@@ -118,6 +122,7 @@ export default function WorkSection() {
                   multiline: true,
                   rows: 5,
                   onChange: (e) => setDescription(e.target.value),
+                  disabled: submitting,
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
