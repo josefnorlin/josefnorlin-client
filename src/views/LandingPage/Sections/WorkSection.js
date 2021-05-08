@@ -13,12 +13,21 @@ import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 
+import axios from "axios";
+
 const useStyles = makeStyles(styles);
 
 export default function WorkSection() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
+
   function sendMail() {
-    // https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod
-    console.log("hej");
+    axios.post("https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod", {
+      name,
+      email,
+      desc: description,
+    });
   }
 
   const [showNotification, setShowNotification] = useState(true);
@@ -49,7 +58,9 @@ export default function WorkSection() {
                 <CustomInput
                   labelText="Your Name"
                   id="name"
+                  value={name}
                   formControlProps={{
+                    onChange: (e) => setName(e.target.value),
                     fullWidth: true,
                   }}
                 />
@@ -58,14 +69,19 @@ export default function WorkSection() {
                 <CustomInput
                   labelText="Your Email"
                   id="email"
+                  value={email}
                   formControlProps={{
                     fullWidth: true,
+                  }}
+                  inputProps={{
+                    onChange: (e) => setEmail(e.target.value),
                   }}
                 />
               </GridItem>
               <CustomInput
                 labelText="Your Message"
-                id="message"
+                id="description"
+                value={description}
                 formControlProps={{
                   fullWidth: true,
                   className: classes.textArea,
@@ -73,6 +89,7 @@ export default function WorkSection() {
                 inputProps={{
                   multiline: true,
                   rows: 5,
+                  onChange: (e) => setDescription(e.target.value),
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
