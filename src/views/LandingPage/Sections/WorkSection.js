@@ -39,6 +39,9 @@ export default function WorkSection() {
       .then((res) => {
         setShowNotification(true);
         setSubmitting(false);
+        setName("");
+        setEmail("");
+        setDescription("");
         console.log(res);
       })
       .catch((error) => {
