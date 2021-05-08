@@ -28,7 +28,7 @@ export default function WorkSection() {
   function sendMail() {
     setSubmitting(true);
     axios
-      .post("https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod", {
+      .post("https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod/contact", {
         name,
         email,
         desc: description,

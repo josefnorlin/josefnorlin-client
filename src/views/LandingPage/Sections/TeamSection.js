@@ -48,7 +48,7 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  Josef is initiative, thorough, focused, constructive,
+                  Josef is taking initiatives, is thorough, focused, constructive,
                   productive, positive, open, cooperative, responsive. Whoever
                   hires Josef gets a really good and loyal co-worker who also
                   lifts others within the team.
