@@ -33,7 +33,7 @@ export default function WorkSection() {
         {
           name,
           email,
-          desc: description,
+          description,
         }
       )
       .then((res) => {
