@@ -21,16 +21,30 @@ export default function WorkSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   function sendMail() {
-    axios.post("https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod", {
-      name,
-      email,
-      desc: description,
-    });
+    setSubmitting(true);
+    axios
+      .post("https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod", {
+        name,
+        email,
+        desc: description,
+      })
+      .then((res) => {
+        setShowNotification(true);
+        setSubmitting(false);
+        console.log(res);
+      })
+      .catch((error) => {
+        setShowError(true);
+        setSubmitting(false);
+        console.log(error);
+      });
   }
 
-  const [showNotification, setShowNotification] = useState(true);
 
   const classes = useStyles();
   return (
@@ -41,7 +55,16 @@ export default function WorkSection() {
         onClose={() => setShowNotification(false)}
       >
         <Alert onClose={() => setShowNotification(false)} severity="success">
-          This is a success message!
+          Thank you for your message!
+        </Alert>
+      </Snackbar>
+      <Snackbar
+        open={showError}
+        autoHideDuration={6000}
+        onClose={() => setShowNotification(false)}
+      >
+        <Alert onClose={() => setShowNotification(false)} severity="error">
+          Something went wrong. Please try again.
         </Alert>
       </Snackbar>
 
@@ -93,7 +116,11 @@ export default function WorkSection() {
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
-                <Button onClick={() => sendMail()} color="primary">
+                <Button
+                  onClick={() => sendMail()}
+                  color="primary"
+                  disabled={submitting}
+                >
                   Send Message
                 </Button>
               </GridItem>
