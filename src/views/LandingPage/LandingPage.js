@@ -1,10 +1,6 @@
 import React from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
-// core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -12,9 +8,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
-
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
-
 import profile from "assets/img/josef.jpg";
 
 // Sections for this page
@@ -65,7 +59,11 @@ export default function LandingPage(props) {
             <GridItem xs={12} sm={12} md={6}>
               <div className={classes.profile}>
                 <div>
-                  <img src={profile} alt="..." className={imageClasses} />
+                  <img
+                    src={profile}
+                    alt="Image of Josef Norlin"
+                    className={imageClasses}
+                  />
                 </div>
                 <div className={classes.name}>
                   <h3 className={classes.title}>Josef Norlin</h3>

@@ -1,21 +1,11 @@
 import React from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
-// @material-ui/icons
-
-// core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
-import CardFooter from "components/Card/CardFooter.js";
-
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
-
 import team1 from "assets/img/faces/p-h.jpg";
 import team2 from "assets/img/faces/peter.jpg";
 // import team3 from "assets/img/faces/kendall.jpg";
@@ -37,43 +27,39 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team1} alt="..." className={imageClasses} />
+                <img
+                  src={team1}
+                  alt="Image of Per-Håkan Bonnevier, Product-Owner, Swedish Public Employment Service"
+                  className={imageClasses}
+                  style={{ maxWidth: "160px" }}
+                />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Per-Håkan Bonnevier
                 <br />
                 <small className={classes.smallTitle}>
-                  Product-owner, Swedish Public Employment Service
+                  Product-Owner, Swedish Public Employment Service
                 </small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  Josef is taking initiatives, is thorough, focused, constructive,
-                  productive, positive, open, cooperative, responsive. Whoever
-                  hires Josef gets a really good and loyal co-worker who also
-                  lifts others within the team.
+                  Josef is taking initiatives, is thorough, focused,
+                  constructive, productive, positive, open, cooperative,
+                  responsive. Whoever hires Josef gets a really good and loyal
+                  co-worker who also lifts others within the team.
                 </p>
               </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <a
-                  href="https://www.linkedin.com/in/per-h%C3%A5kan-bonnevier-3837aa20/"
-                  target="_new"
-                >
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
-                  >
-                    <i className={classes.socials + " fab fa-linkedin"} />
-                  </Button>
-                </a>
-              </CardFooter>
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team2} alt="..." className={imageClasses} />
+                <img
+                  src={team2}
+                  alt="Image of Peter Webb, Multi-Entrepreneur, ePlanket"
+                  className={imageClasses}
+                  style={{ maxWidth: "160px" }}
+                />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Peter Webb
@@ -90,22 +76,6 @@ export default function TeamSection() {
                   challenges.
                 </p>
               </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-linkedin"} />
-                </Button>
-              </CardFooter>
             </Card>
           </GridItem>
           {/* <GridItem xs={12} sm={12} md={4}>
