@@ -28,11 +28,14 @@ export default function WorkSection() {
   function sendMail() {
     setSubmitting(true);
     axios
-      .post("https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod/contact", {
-        name,
-        email,
-        desc: description,
-      })
+      .post(
+        "https://dwq809sql8.execute-api.us-east-1.amazonaws.com/prod/contact",
+        {
+          name,
+          email,
+          desc: description,
+        }
+      )
       .then((res) => {
         setShowNotification(true);
         setSubmitting(false);
@@ -44,7 +47,6 @@ export default function WorkSection() {
         console.log(error);
       });
   }
-
 
   const classes = useStyles();
   return (
