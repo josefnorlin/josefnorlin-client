@@ -24,6 +24,7 @@ export default function WorkSection() {
   const [submitting, setSubmitting] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
   const [showError, setShowError] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
 
   function sendMail() {
     setSubmitting(true);
@@ -42,6 +43,7 @@ export default function WorkSection() {
         setName("");
         setEmail("");
         setDescription("");
+        setMessageSent(true);
         console.log(res);
       })
       .catch((error) => {
@@ -73,71 +75,81 @@ export default function WorkSection() {
         </Alert>
       </Snackbar>
 
-      <GridContainer justify="center">
-        <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Let{"'"}s get in touch</h2>
-          <h4 className={classes.description}>
-            I{"'"}m always interested in new connections. Write here and I{"'"}
-            ll get back to you.
-          </h4>
-          <form>
-            <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
+      {messageSent && (
+        <GridContainer justify="center">
+          <GridItem cs={12} sm={12} md={8}>
+            <h2 className={classes.title}>Thank you for your message! </h2>
+          </GridItem>
+        </GridContainer>
+      )}
+      {!messageSent && (
+        <GridContainer justify="center">
+          <GridItem cs={12} sm={12} md={8}>
+            <h2 className={classes.title}>Let{"'"}s get in touch</h2>
+            <h4 className={classes.description}>
+              I{"'"}m always interested in new connections. Write here and I
+              {"'"}
+              ll get back to you.
+            </h4>
+            <form>
+              <GridContainer>
+                <GridItem xs={12} sm={12} md={6}>
+                  <CustomInput
+                    labelText="Your Name"
+                    id="name"
+                    value={name}
+                    formControlProps={{
+                      fullWidth: true,
+                    }}
+                    inputProps={{
+                      disabled: submitting,
+                      onChange: (e) => setName(e.target.value),
+                    }}
+                  />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={6}>
+                  <CustomInput
+                    labelText="Your Email"
+                    id="email"
+                    value={email}
+                    formControlProps={{
+                      fullWidth: true,
+                    }}
+                    inputProps={{
+                      onChange: (e) => setEmail(e.target.value),
+                      disabled: submitting,
+                    }}
+                  />
+                </GridItem>
                 <CustomInput
-                  labelText="Your Name"
-                  id="name"
-                  value={name}
+                  labelText="Your Message"
+                  id="description"
+                  value={description}
                   formControlProps={{
                     fullWidth: true,
+                    className: classes.textArea,
                   }}
                   inputProps={{
-                    disabled: submitting,
-                    onChange: (e) => setName(e.target.value),
-                  }}
-                />
-              </GridItem>
-              <GridItem xs={12} sm={12} md={6}>
-                <CustomInput
-                  labelText="Your Email"
-                  id="email"
-                  value={email}
-                  formControlProps={{
-                    fullWidth: true,
-                  }}
-                  inputProps={{
-                    onChange: (e) => setEmail(e.target.value),
+                    multiline: true,
+                    rows: 5,
+                    onChange: (e) => setDescription(e.target.value),
                     disabled: submitting,
                   }}
                 />
-              </GridItem>
-              <CustomInput
-                labelText="Your Message"
-                id="description"
-                value={description}
-                formControlProps={{
-                  fullWidth: true,
-                  className: classes.textArea,
-                }}
-                inputProps={{
-                  multiline: true,
-                  rows: 5,
-                  onChange: (e) => setDescription(e.target.value),
-                  disabled: submitting,
-                }}
-              />
-              <GridItem xs={12} sm={12} md={4}>
-                <Button
-                  onClick={() => sendMail()}
-                  color="primary"
-                  disabled={submitting}
-                >
-                  Send Message
-                </Button>
-              </GridItem>
-            </GridContainer>
-          </form>
-        </GridItem>
-      </GridContainer>
+                <GridItem xs={12} sm={12} md={4}>
+                  <Button
+                    onClick={() => sendMail()}
+                    color="primary"
+                    disabled={submitting}
+                  >
+                    Send Message
+                  </Button>
+                </GridItem>
+              </GridContainer>
+            </form>
+          </GridItem>
+        </GridContainer>
+      )}
     </div>
   );
 }
