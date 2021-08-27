@@ -67,7 +67,7 @@ export default function LandingPage(props) {
                 </div>
                 <div className={classes.name}>
                   <h3 className={classes.title}>Josef Norlin</h3>
-                  <h6>HUMAN-CENTERED FULL-STACK DEVELOPER</h6>
+                  <h6>HUMAN-CENTERED PRODUCT DEVELOPER</h6>
                   <Button justIcon link className={classes.margin5}>
                     <i className={"fab fa-twitter"} />
                   </Button>
