@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import { Snackbar } from "@material-ui/core";
-import { Alert } from "@material-ui/lab";
+import Alert from "@material-ui/lab/Alert";
 // @material-ui/icons
 
 // core components
